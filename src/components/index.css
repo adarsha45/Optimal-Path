@@ -1,0 +1,263 @@
+.action-component {
+  position: fixed;
+  background-color: white;
+  color: #222;
+  max-height: calc(100vh - 35px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  left: 8px;
+  top: 8px;
+  border: 1px solid darkcyan;
+  width: 25rem;
+  opacity: 0.95;
+  padding: 0.5rem 1.5rem;
+  padding-bottom: 1rem;
+  text-align: justify;
+}
+
+.route-address {
+  text-align: left;
+  padding: 0.3em;
+  margin: 0.5em 0;
+  border: 1px solid lightgray;
+  cursor: pointer;
+}
+
+.route-address:hover {
+  background-color: whitesmoke;
+}
+
+.route-summary {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem;
+  color: darkcyan;
+  font-weight: bold;
+}
+
+.max {
+  background-color: #ff3d00;
+  color: white;
+  margin: 1rem 0;
+}
+
+.route-ready {
+  font-size: larger;
+}
+
+.route-buttons {
+  display: flex;
+}
+
+.repeat-start-btn {
+  font-size: 0.8rem;
+  background-color: darkcyan;
+  color: white;
+  cursor: pointer;
+  padding: 0.3rem;
+}
+
+input {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 12px;
+  width: 98%;
+  margin-top: 0.2rem;
+}
+
+.search-item {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.option-btn {
+  cursor: pointer;
+  margin: 0.5em 0;
+  border: 1px solid gainsboro;
+  padding: 0.5em;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.option-btn.route {
+  background-color: darkcyan;
+  color: white;
+  font-weight: bold;
+  width: auto;
+  justify-content: center;
+  font-size: large;
+  display: flex;
+}
+
+.option-btn.google {
+  flex: 1.5;
+  margin: 0.5rem;
+}
+
+.page-info {
+  border-radius: 4px;
+  padding: 0.5rem 0;
+}
+
+.page-info .closed {
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: darkcyan;
+  color: white;
+  opacity: 0.9;
+  text-align: center;
+}
+
+.page-info .open {
+  text-align: left;
+  background-color: white;
+  color: #222;
+  opacity: 0.95;
+  border: 1px solid darkcyan;
+  font-size: 1em;
+  padding: 0.5rem;
+}
+
+.close-info {
+  cursor: pointer;
+  text-align: end;
+  margin-bottom: 5px;
+}
+
+.social-btn {
+  padding: 0.7em;
+}
+
+.social-logos {
+  height: 3em;
+  cursor: pointer;
+}
+
+.map-click-btn {
+  background-color: whitesmoke;
+  color: #222;
+  padding: 0.5em;
+  cursor: pointer;
+  width: fit-content;
+  margin: 10px auto;
+}
+
+.sub-title {
+  margin: 0.5rem 0;
+}
+
+.inputs-section {
+  margin-top: 1rem;
+}
+
+.field-title {
+  text-align: left;
+}
+
+.file-upload {
+  padding: 0.5rem;
+  width: 50%;
+  margin: 0.5rem 0;
+  border: 1px solid darkgrey;
+  background-color: ghostwhite;
+}
+
+.route-stops {
+  display: flex;
+  flex-direction: row;
+}
+
+.click-instruction {
+  padding: 0.4rem;
+  text-align: center;
+  font-weight: 600;
+  color: darkcyan;
+}
+
+.stops-list {
+  margin: 1rem 0;
+}
+
+.remove-stop {
+  cursor: pointer;
+}
+
+.loader-wrapper {
+  justify-content: center;
+  display: flex;
+  padding: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.loader {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  left: -32px;
+  border-radius: 50%;
+  color: darkcyan;
+  background: darkcyan;
+  box-shadow: 32px 0, -32px 0, 64px 0;
+}
+
+.loader::after {
+  content: "";
+  position: absolute;
+  left: -32px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 10px;
+  background: #ff3d00;
+  animation: move 3s linear infinite alternate;
+}
+
+@keyframes move {
+  0%,
+  5% {
+    left: -32px;
+    width: 16px;
+  }
+  15%,
+  20% {
+    left: -32px;
+    width: 48px;
+  }
+  30%,
+  35% {
+    left: 0px;
+    width: 16px;
+  }
+  45%,
+  50% {
+    left: 0px;
+    width: 48px;
+  }
+  60%,
+  65% {
+    left: 32px;
+    width: 16px;
+  }
+
+  75%,
+  80% {
+    left: 32px;
+    width: 48px;
+  }
+  95%,
+  100% {
+    left: 64px;
+    width: 16px;
+  }
+}
+
+.google-link {
+  text-decoration: none;
+}
+
+.empty-btn {
+  margin-left: 1rem;
+}
