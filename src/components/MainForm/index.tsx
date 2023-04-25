@@ -40,9 +40,7 @@ export const MainForm = () => {
       {isShowingForm && (
         <>
           <PageInfo />
-          <div className="sub-title">
-            Create your best driving route between multiple points
-          </div>
+          <div className="sub-title"></div>
           <RouteInputs updateRoute={updateRoutePoints} />
           <StopsList updateFunction={updateRoutePoints} />
           <EnableAddPointOnClick refreshLayerCallback={updateRoutePoints} />
