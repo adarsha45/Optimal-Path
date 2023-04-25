@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 
 import { RouteStep } from "../../api/openRouteService/types";
 
-import { createGoogleMapsUrl } from "./util";
+//import { createGoogleMapsUrl } from "./util";
 
 type GoogleButtonProps = {
   routeSteps: RouteStep[];
@@ -18,18 +18,7 @@ const GoogleButton = ({
     return <div className="empty-btn" />;
   }
 
-  return (
-    <div className="option-btn google">
-      <a
-        className="google-link"
-        href={createGoogleMapsUrl(jobs)}
-        target="_blank"
-        rel="noreferrer"
-      >
-        Open on GoogleMaps
-      </a>
-    </div>
-  );
+  return <div className="empty-btn" />;
 };
 
 export default GoogleButton;
