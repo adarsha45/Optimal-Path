@@ -41,9 +41,25 @@ const CreateRoute = ({
       return <Route route={calculatedRoute} exitFunction={exitRoute} />;
     }
   }
+  function ada() {
+    fetch("https://dummy.restapiexample.com/api/v1/create", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ id: "1", name: end }),
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.error(error));
+  }
+  const handleToggle = () => {
+    toggleFunction();
+    ada();
+  };
 
   return (
-    <div className="option-btn route" onClick={toggleFunction}>
+    <div className="option-btn route" onClick={handleToggle}>
       Create Route
     </div>
   );
